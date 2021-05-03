@@ -1,16 +1,12 @@
 # **LDtk Code Generator**
 
-Auxiliary library for generating C# classes mapped from objects defined in LDtk files.
-
-
+Auxiliary library for generating C# classes mapped from the objects defined in LDtk files.
 
 ## **Dependencies**
 
 * Newtonsoft.Json
 
 * The [quicktype generated file ](https://ldtk.io/files/quicktype/LdtkJson.cs)for loading LDtk json files 
-
-
 
 ## **How to use**
 
@@ -34,20 +30,11 @@ LdtkCodeGenerator cg = new LdtkCodeGenerator();
 cg.GenerateCode(ldtkJson, ctx, fOut);
 ```
 
-
 ## **Extending**
 
-* **Changing the Entity classes**
+* **LdtkCodeCustomizer**
   
-  * Subclassing Framework classes
-
-* **Generating Framework specific types**
-  
-  * Vector
-  
-  * Color
-  
-  * ...
+  With the `LdtkCodeCustomizer` class it's possible to modify the generated classes
 
 * **File Output**
   
@@ -55,13 +42,9 @@ cg.GenerateCode(ldtkJson, ctx, fOut);
   
   * MultiFileOutput
 
-
-
 ## **Future**
 
-* Wrap it in a [Source Generator]([Introducing C# Source Generators | .NET Blog](https://devblogs.microsoft.com/dotnet/introducing-c-source-generators/))
-  
-  
+* Wrap it in a [Source Generator](https://devblogs.microsoft.com/dotnet/introducing-c-source-generators/)
 
 ## **License**
 
